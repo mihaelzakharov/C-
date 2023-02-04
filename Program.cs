@@ -2,7 +2,7 @@
 // какое число большее, а какое меньшее.
 
 
-/* Console.Write("Введите первое число: ");
+Console.Write("Введите первое число: ");
 int numberOne = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Введите второе число: ");
@@ -19,36 +19,35 @@ else if (numberTwo > numberOne)
 else
 {
     Console.WriteLine("Первое число " + numberOne + " = " + "второму числу " + numberTwo);
-} */
+}
 
 
 
 // Задача 4: Напишите программу, которая принимает на вход
 // три числа и выдаёт максимальное из этих чисел.
 
-/* Console.WriteLine("Введите три числа: ");
-int numberOne = Convert.ToInt32(Console.ReadLine());
-int numberTwo = Convert.ToInt32(Console.ReadLine());
-int numberThree = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите три числа: ");
+int number1 = Convert.ToInt32(Console.ReadLine());
+int number2 = Convert.ToInt32(Console.ReadLine());
+int number3 = Convert.ToInt32(Console.ReadLine());
 
-int max = numberOne;
+int max = number1;
 
-if (numberTwo > max)
+if (number2 > max)
 {
-    max = numberTwo;
+    max = number2;
 }
-if (numberThree > max)
+if (number3 > max)
 {
-    max = numberThree;
+    max = number3;
 }
-
-Console.WriteLine("Максимальное из этих трех чисел " + max); */
+Console.WriteLine("Максимальное из этих трех чисел " + max); 
 
 
 // Задача 6: Напишите программу, которая на вход принимает число и выдаёт,
 // является ли число чётным (делится ли оно на два без остатка).
 
-/* Console.Write("Введите число: ");
+Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
 if (num % 2 == 0)
@@ -58,9 +57,30 @@ if (num % 2 == 0)
 else
 {
     Console.WriteLine("Число " + num + " является: НЕЧЁТНЫМ");
-} */
+}
+
 
 
 // Задача 8: Напишите программу, которая на вход принимает число (N), 
 // а на выходе показывает все чётные числа от 1 до N.
 
+int i = 1;
+bool not = true;
+
+Console.Write("Введите число: ");
+int numberN = Convert.ToInt32(Console.ReadLine());
+Console.Write("Чётные числа от 1 до " + numberN + ": ");
+while (i <= numberN)
+{
+    if (i % 2 == 0)
+{
+Console.Write(i + " ");
+not = false;
+}
+i++;
+}
+if (not)
+{
+    Console.WriteLine("Нет чётных чисел!");
+}
+Console.WriteLine();
